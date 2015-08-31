@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8121.20" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="klb-8L-MOp" userLabel="PickerView" customClass="PickerClass" customModule="SwiftProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="206"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view autoresizesSubviews="NO" clipsSubviews="YES" tag="1234" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwW-1C-P4J">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="206"/>
+                    <subviews>
+                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Tb-kP-Irh">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="pgo-Wp-cOb"/>
+                            </constraints>
+                            <items>
+                                <barButtonItem tag="2" title="Cancel" id="jLh-iS-JQy">
+                                    <connections>
+                                        <action selector="cancelBtnTapped:" destination="klb-8L-MOp" id="3vi-G7-ug2"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem systemItem="flexibleSpace" id="hnH-ux-XcL"/>
+                                <barButtonItem tag="3" title="Title" id="wQJ-sq-eVj"/>
+                                <barButtonItem systemItem="flexibleSpace" id="QFO-TR-5aj"/>
+                                <barButtonItem tag="4" title="Done" id="uzI-SG-w91">
+                                    <connections>
+                                        <action selector="doneBtnTapped:" destination="klb-8L-MOp" id="oRR-PM-BWf"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
+                        <pickerView tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xt5-r6-h0E">
+                            <rect key="frame" x="0.0" y="44" width="320" height="162"/>
+                            <connections>
+                                <outlet property="dataSource" destination="klb-8L-MOp" id="dzA-1P-6JG"/>
+                                <outlet property="delegate" destination="klb-8L-MOp" id="0Nh-zI-iYW"/>
+                            </connections>
+                        </pickerView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="xt5-r6-h0E" firstAttribute="leading" secondItem="gwW-1C-P4J" secondAttribute="leading" id="JYr-Om-IGa"/>
+                        <constraint firstAttribute="trailing" secondItem="9Tb-kP-Irh" secondAttribute="trailing" id="V6t-m9-Aa0"/>
+                        <constraint firstItem="9Tb-kP-Irh" firstAttribute="leading" secondItem="gwW-1C-P4J" secondAttribute="leading" id="bzN-VJ-Ltj"/>
+                        <constraint firstItem="xt5-r6-h0E" firstAttribute="top" secondItem="9Tb-kP-Irh" secondAttribute="bottom" id="jO6-9F-Nn2"/>
+                        <constraint firstAttribute="trailing" secondItem="xt5-r6-h0E" secondAttribute="trailing" id="lvv-SC-a3c"/>
+                        <constraint firstItem="9Tb-kP-Irh" firstAttribute="top" secondItem="gwW-1C-P4J" secondAttribute="top" id="nB3-fA-gAo"/>
+                        <constraint firstAttribute="bottom" secondItem="xt5-r6-h0E" secondAttribute="bottom" id="zDj-CP-DVb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gwW-1C-P4J" secondAttribute="trailing" id="63C-YM-gtf"/>
+                <constraint firstItem="gwW-1C-P4J" firstAttribute="leading" secondItem="klb-8L-MOp" secondAttribute="leading" id="8Rg-f0-KJ2"/>
+                <constraint firstItem="gwW-1C-P4J" firstAttribute="top" secondItem="klb-8L-MOp" secondAttribute="top" id="j9Z-HK-14p"/>
+                <constraint firstAttribute="bottom" secondItem="gwW-1C-P4J" secondAttribute="bottom" id="wXc-bl-wkv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="pickerContainer" destination="gwW-1C-P4J" id="Ehx-K1-JVU"/>
+                <outlet property="pickerTitle" destination="wQJ-sq-eVj" id="PPg-J1-7hb"/>
+                <outlet property="pickerView" destination="xt5-r6-h0E" id="v5p-48-TXp"/>
+            </connections>
+            <point key="canvasLocation" x="640" y="394"/>
+        </view>
+    </objects>
+</document>
